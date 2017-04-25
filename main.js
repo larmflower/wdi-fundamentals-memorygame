@@ -18,3 +18,11 @@ var cardTwo= cards[2];
 cardsInPlay.push(cardTwo);
 console.log("user flipped King");
 
+if(cardsInPlay.length ===2){
+} else if(cardsInPlay === 0){
+alert("You found a match!")
+}
+
+else {
+ alert("Sorry, try again")
+}

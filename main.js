@@ -7,7 +7,27 @@
 
 //   console.log("User flipped " + cardOne);
 //   console.log("User flipped " + cardThree);
-var cards = ["queen", "queen", "king", "king"];
+var cards = 
+[{
+	rank: "queen",
+	suit: "hearts",
+	cardImage: "queen-of-hearts.png"
+
+},{
+	rank: "queen",
+	suit: "diamonds",
+	cardImage: "queen-of-diamonds.png"
+},{
+	rank: "king",
+	suit: "hearts",
+	cardImage: "king-of-hearts.png"
+},{
+	rank: "king",
+	suit: "diamonds",
+	cardImage: "king-of-diamonds.png"
+}];
+
+
 var cardsInPlay= [];
 
 var checkForMath = function(){
@@ -29,10 +49,14 @@ alert("You found a match!")
 else {
  alert("Sorry, try again")
 }
-console.log("User flipped " + cards[cardId]);
+console.log("User flipped " + cards[cardId].rank);
 }
 
-cardsInPlay.push(cards[cardId]);
+cardsInPlay.push(cards[cardId].rank);
 
 flipCard(0);
 flipCard(2);
+
+console.log(cardImage);
+console.log(suit);
+

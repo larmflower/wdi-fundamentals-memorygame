@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-//  console.log("Up and running!"); <-- Unit 7 Assignment 
-=======
-//  console.log("Up and running!");
->>>>>>> origin/master
+
 
 // var cardOne = "queen";
 // var cardTwo = "queen";

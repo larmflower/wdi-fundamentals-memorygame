@@ -3,6 +3,8 @@ body {
 	text-align: center;
 }
 
+
+
 main {
 	width: 850px;
 	margin: 35px auto;
@@ -68,6 +70,24 @@ footer {
 	font-size: 14px;
 	letter-spacing: .08em;
 	font-weight: 500;
+}
+
+.board {
+	display: inline-block;
+	height: 50%;
+	width: 50%;
+}
+
+.card {
+	height: 200px;
+	width: 150px;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+	background-color: yellow;
+	border-radius: 10px;
+	float: left;
+	margin: 8%;
 }
 
 .copyright {

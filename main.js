@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+//  console.log("Up and running!"); <-- Unit 7 Assignment 
+=======
 //  console.log("Up and running!");
+>>>>>>> origin/master
 
 // var cardOne = "queen";
 // var cardTwo = "queen";
@@ -37,9 +41,9 @@ var cardsInPlay= [];
 
 var checkForMath = function(){
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-      console.log("You found a match!");
+      alert("You found a match!");
   } else {
-      console.log("Sorry, try again.");
+      alert("Sorry, try again.");
   }
 
 };
@@ -50,36 +54,46 @@ var checkForMath = function(){
 // Create alert when cards match to pop up in browser saying "you've found match"
 var flipCard = function(){ 
 var cardId = this.getAttribute('data-id');
+cardsInPlay.push(cards[cardId].rank);
+checkForMath();
+console.log("User flipped" + cards[cardId].rank);
+console.log(cards[cardId].wait);
+console.log(cards[cardId].cardImage);
+this.setAttribute('src', cards[cardId].cardImage);
+if (cardsInPlay.length ===2){
 
+}
+};
 //  use the setAttribute method to update the src 
 //  attribute to the image of the card that was 
 //  just clicked, which is stored in the cardImage
 //   property in that card's object in the cards
 //   array.
-this.setAttribute('src', cards[cardId].cardImage);
+// this.setAttribute('src', cards[cardId].cardImage);
 
-if(cardsInPlay.length % 2 === 0){
-} else if(cardsInPlay % 0 === 0){
-alert("You found a match!");
-};
-else {
- alert("Sorry, try again");
-};
-console.log("User flipped " + cards[cardId].rank);
-};
+// if(cardsInPlay.length % 2 === 0){
+// } else if(cardsInPlay % 0 === 0){
+// alert("You found a match!");
+// };
+// else {
+//  alert("Sorry, try again");
+// };
+// console.log("User flipped " + cards[cardId].rank);
+// };
 
-cardsInPlay.push(cards[cardId].rank);
+// cardsInPlay.push(cards[cardId].rank);
 
 // !!- Finish function below
 // Create function that takes no parameter or argument, store in createBoard variable
 // Create for loop within function that runs through each card and creates new one
 var createBoard = function(){
-for (var i=0; i< cards.length; i++) {
+for (var i=0; i< createBoard.length; i++) {
 var cardElement = document.createElement('img');
-cardElement.setAttribute('src', 'back.png');
-cardElement.setAttribute('data-id', '[i]');
-document.getElementById('cardElement')[0].addEventListener('click', addEvent);
-document.getElementById('gameboard')[0].appendChild(boxElement);
+cardElement.setAttribute('src', 'images/back.png');
+cardElement.setAttribute('data-id', i);
+cardElement.addEventListener('click', flipCard);
+document.getElementById('gameboard').appendChild(cardElement);
+// document.getElementById('gameboard')[0].appendChild(boxElement);
 }
 };
 
